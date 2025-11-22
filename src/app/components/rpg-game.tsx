@@ -103,7 +103,10 @@ export default function RpgGame() {
             <div className="text-center space-y-4 animate-in fade-in zoom-in duration-500 relative z-10">
               <Skull className="w-20 h-20 text-red-600 mx-auto mb-4 animate-pulse" />
               <h2 className="text-4xl font-bold text-red-600 tracking-widest uppercase">YOU DIED</h2>
-              <p className="text-slate-400 italic border-t border-slate-800 pt-4">"{gameState.narrative}"</p>
+              
+              {/* PERBAIKAN: Menggunakan &quot; pengganti tanda kutip agar valid HTML */}
+              <p className="text-slate-400 italic border-t border-slate-800 pt-4">&quot;{gameState.narrative}&quot;</p>
+              
               <button 
                 onClick={resetGame}
                 className="bg-red-700 hover:bg-red-600 text-white px-8 py-3 rounded-full font-bold transition-all mt-6 shadow-lg shadow-red-900/50"
