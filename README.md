@@ -1,37 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+⚔️ AI Dungeon Master: Infinite Text-Based RPG
 
-## Getting Started
+"Di mana takdirmu ditentukan oleh kecerdasan buatan."
 
-First, run the development server:
+(Ganti link gambar di atas dengan screenshot asli web kamu nanti)
 
-```bash
+📖 Tentang Proyek
+
+AI Dungeon Master adalah sebuah web game RPG berbasis teks (Text-Based Adventure) yang dinamis dan tidak terbatas. Berbeda dengan game RPG konvensional yang ceritanya sudah ditulis mati (hardcoded), game ini menggunakan Generative AI (Llama 3 via Groq) sebagai "Game Master".
+
+Setiap keputusan yang kamu ambil—mulai dari menyerang naga hingga bernegosiasi dengan goblin—akan diproses secara real-time oleh AI, menghasilkan konsekuensi unik yang tidak pernah sama setiap kali dimainkan.
+
+✨ Fitur Utama
+
+🧠 AI Narrator (Llama 3): Cerita yang dibuat secara generatif, adaptif, dan terkadang... kejam.
+
+❤️ Real Health System: Sistem HP yang dihitung secara matematika (bukan halusinasi AI).
+
+🎒 Dynamic Inventory: AI akan memberikan atau menghancurkan item berdasarkan konteks cerita.
+
+🎵 Immersive Audio: Backsound misteri yang menyala otomatis saat petualangan dimulai.
+
+🛡️ Offline Fallback Mode: Sistem anti-crash yang tetap menjalankan game meski API AI bermasalah.
+
+🎨 Modern UI: Dibangun dengan Next.js & Tailwind CSS dengan nuansa Dark Fantasy.
+
+🛠️ Teknologi yang Digunakan
+
+Proyek ini dibangun menggunakan stack modern untuk menjamin performa dan skalabilitas:
+
+Frontend: Next.js 14 (App Router), React, TypeScript.
+
+Styling: Tailwind CSS + Lucide React (Icons).
+
+AI Engine: Groq API (Model: Llama 3.3 70B Versatile) via Vercel AI SDK.
+
+Architecture: MVC Pattern (View terpisah dari Logic Controller).
+
+🚀 Cara Menjalankan (Localhost)
+
+Ikuti langkah ini untuk menjalankan game di komputer kamu:
+
+1. Clone Repository
+
+git clone [https://github.com/username-kamu/rpg-ai.git](https://github.com/username-kamu/rpg-ai.git)
+cd rpg-ai
+
+
+2. Install Dependencies
+
+npm install
+
+
+3. Setup Environment Variables
+
+Buat file .env.local di folder root proyek, lalu tambahkan API Key Groq kamu.
+(Dapatkan API Key gratis di console.groq.com)
+
+GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+Catatan: Jika kamu menggunakan hardcode key di game.actions.ts untuk testing, langkah ini opsional tapi tidak disarankan untuk production.
+
+4. Jalankan Server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Buka browser dan akses: http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📂 Struktur Folder
 
-## Learn More
+Proyek ini menggunakan struktur folder Next.js App Router yang rapi:
 
-To learn more about Next.js, take a look at the following resources:
+src/
+├── app/
+│   ├── actions/       # Server Actions (Backend Logic & AI Call)
+│   ├── components/    # UI Components (View)
+│   ├── hooks/         # Custom Hooks (Controller/State Logic)
+│   ├── layout.tsx     # Root Layout
+│   └── page.tsx       # Entry Point
+└── public/
+    └── sound/         # Aset Audio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📸 Screenshot
 
-## Deploy on Vercel
+| Start Screen | Gameplay |
+|Data | Data |
+|  |  |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+(Jangan lupa upload screenshot asli ke folder public atau issue github, lalu ganti link di atas)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# game_rpg_ai
+🤝 Kontribusi
+
+Proyek ini terbuka untuk kontribusi! Jika kamu punya ide fitur baru (misal: sistem Level Up atau Leaderboard), silakan:
+
+Fork repository ini.
+
+Buat branch fitur baru (git checkout -b fitur-keren).
+
+Commit perubahanmu (git commit -m 'Menambah fitur keren').
+
+Push ke branch (git push origin fitur-keren).
+
+Buat Pull Request.
+
+📝 Lisensi
+
+Distributed under the MIT License. See LICENSE for more information.
+
+<p align="center">
+Dibuat dengan ❤️ dan ☕ oleh [Rafii aja]
+</p>
